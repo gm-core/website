@@ -1,3 +1,5 @@
 .temp/
 public
 node_modules
+
+.vercel

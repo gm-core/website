@@ -1,6 +1,6 @@
 # gdash
 
-`gdash` is a functional utility suite for GameMaker: Studio 2, inspired by [lodash](https://lodash.com).
+[gdash](https://github.com/gm-core/gdash) is a functional utility suite for GameMaker: Studio 2, inspired by [lodash](https://lodash.com).
 
 ## Installation
 

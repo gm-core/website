@@ -4,14 +4,22 @@ module.exports = {
   dest: "public",
   themeConfig: {
     lastUpdated: 'Last Updated',
-    repo: 'gm-core/website',
+    repo: 'https://github.com/gm-core',
+    docsRepo: 'gm-core/website',
     editLinks: true,
     sidebar: [
-      '/',
+      {
+        title: 'Home',
+        collapsable: false,
+        path: '/',
+        children: [
+          '/browse.html',
+          '/gamemaker-2.3-beta.html',
+        ],
+      },
       {
         title: 'gdash',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/gdash/',
         children: [
           '/gdash/api.html',
@@ -20,7 +28,6 @@ module.exports = {
       {
         title: 'Patchwire',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/patchwire/',
         children: [
           '/patchwire/api.html',
@@ -29,7 +36,6 @@ module.exports = {
       {
         title: 'Event Horizon',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/event-horizon/',
         children: [
           '/event-horizon/api.html',
@@ -38,7 +44,6 @@ module.exports = {
       {
         title: 'Delta',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/delta/',
         children: [
           '/delta/',
@@ -47,7 +52,6 @@ module.exports = {
       {
         title: 'Particore',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/particore/',
         children: [
           '/particore/api.html',
@@ -56,7 +60,6 @@ module.exports = {
       {
         title: 'Gamatas',
         collapsable: false,
-        sidebarDepth: 2,
         path: '/gamatas/',
         children: [
           '/gamatas/api.html',
