@@ -10,10 +10,28 @@ module.exports = {
       {
         title: 'gdash',
         collapsable: false,
-        sidebarDepth: 3,
+        sidebarDepth: 2,
+        path: '/gdash',
         children: [
-          '/gdash/',
           '/gdash/api.html',
+        ],
+      },
+      {
+        title: 'Patchwire',
+        collapsable: false,
+        sidebarDepth: 2,
+        path: '/patchwire',
+        children: [
+          '/patchwire/api.html',
+        ],
+      },
+      {
+        title: 'Event Horizon',
+        collapsable: false,
+        sidebarDepth: 2,
+        path: '/event-horizon',
+        children: [
+          '/event-horizon/api.html',
         ],
       },
     ],

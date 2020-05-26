@@ -1,4 +1,4 @@
-# API
+# gdash API
 
 ## `_and(valueA, valueB)`
 
