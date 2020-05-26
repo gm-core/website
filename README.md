@@ -1,16 +1,112 @@
-# GM Core
+---
+home: true
+tagline: "Foundational utilities for GameMaker: Studio"
+actionText: Get Started
+actionLink: /browse/
+features:
+- title: Lightweight
+  details: "GM Core utilities come packaged as simple scripts or GMS local packages and create no overhead on your project."
+- title: Documented
+  details: "GM Core scripts all come with extenisve in-script documentation and auto-complete/code suggestion support."
+- title: "Free & Open Source"
+  details: "All GM Core code is completely free and licensed under the MIT License so you can use them without worry."
 
-GM Core is a suite of foundational utilities for GameMaker: Studio 2 projects, developed and maintained by [@twisterghost](https://twitter.com/twisterghost).
+footer: MIT Licensed | Copyright 2020 Michael Barrett
+---
 
-## License
+## Functional Utilities with gdash
 
-These utilities were built to be used with any kind of GM:S2 project and are licensed under the [MIT liecense](https://opensource.org/licenses/MIT), so you can use them as you need in any project.
+Use [gdash](/gdash/) to make your everyday scripting a little easier...
 
-## Utilities
+```gml
+// Reverse the items in your inventory
+var items = ["bag of holding", "ancient gem", "annoying dog"];
+var reversed = _backward(items);
+_log(reversed) // ["annoying dog", "ancient gem", "bag of holding"]
 
-* [gdash](/gdash/), a functional utility library
-* [Patchwire](/patchwire/), a simple networking system
-* [Event Horizon](/event-horizon/), a custom event system
-* [Delta](/delta/), a lightweight delta timing solution
-* [Particore](/particore/), a simplified particle manager
-* [Gamatas](/gamatas/), a behavioral testing suite
+// Get all the nearby enemies
+var enemies = _collect(obj_enemy);
+var nearbyEnemies = _filter(enemies, is_near_player);
+
+// Or just type a little less...
+var playerData = _map_of(
+  "health", 30,
+  "mana", 20
+);
+
+_free(playerData);
+```
+
+## Simple Online Networking with Patchwire
+
+Use [Patchwire](/patchwire/) to make a simple online game...
+
+```gml
+net_init();
+net_connect("10.0.0.1", 3000);
+net_cmd_add_handler("connected", handle_connected);
+net_cmd_add_handler("newPlayer", handle_new_player);
+
+// handle_connected
+show_debug_message("Connected to server");
+
+// handle_new_player
+var payload = argument0;
+var name  = payload[? "name"];
+show_debug_message(name + " has joined!");
+```
+
+## Custom Global Events with Event Horizon
+
+Use [Event Horizon](/event-horizon/) to add an event pub/sub setup to your project...
+
+```gml
+event_fire("gunshot");
+
+// Elsewhere...
+event_add_listener("gunshot", 0);
+```
+
+## Easy Timing with Delta
+
+Use [Delta](/delta/) to easily scale everything to real time...
+
+```gml
+moveSpeed = 5;
+
+// Scale my speed up or down depending on how much real time has passed.
+speed = d(moveSpeed);
+```
+
+## Painless Particles with Particore
+
+Use [Particore](/particore/) to improve the ergonomics of building particles in code...
+
+```gml
+partType = pt_new();
+pt_color(c_red);
+pt_speed(2, 5);
+pt_sprite(spr_particle);
+pt_direction(PT.Any);
+pt_orientation(PT.Relative);
+pt_life(60, 120);
+```
+
+## Test Your Code with Gamatas
+
+Use [Gamatas](/gamatas/) to write tests for your code...
+
+```gml
+test_describe("Player takes damage");
+
+test_it("causes the health variable to be lower");
+
+instance_create_depth(100, 100, 0, obj_player);
+var oldHP = obj_player.hp;
+var damageAmount = 10;
+hurt_player(damageAmount); // A script to cause damage to the player.
+
+assert_equal(obj_player.hp, oldHP - damageAmount);
+
+test_end();
+```

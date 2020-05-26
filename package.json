@@ -1,0 +1,24 @@
+{
+  "name": "gmcore-website",
+  "version": "1.0.0",
+  "description": "Website for GM Core",
+  "main": "",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gm-core/website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gm-core/website/issues"
+  },
+  "homepage": "https://github.com/gm-core/website#readme",
+  "devDependencies": {
+    "vuepress": "^1.5.0"
+  }
+}

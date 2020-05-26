@@ -750,7 +750,7 @@ _spread(add_to_list, [listId, 1, 2, 3, 4]);
 // => List now contains 1, 2, 3, 4
 ```
 
-## `_times(script)`
+## `_times(executeCount, script)`
 
 Returns an array of the result of a function run the given number of times
 

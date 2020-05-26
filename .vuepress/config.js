@@ -1,17 +1,18 @@
 module.exports = {
   title: 'GM Core',
   description: 'Technical documentation and guides for GM Core, a suite of tools for GameMaker: Studio 2',
+  dest: "public",
   themeConfig: {
-    nav: [
-      { text: 'Github', link: 'https://github.com/gm-core' },
-    ],
+    lastUpdated: 'Last Updated',
+    repo: 'gm-core/website',
+    editLinks: true,
     sidebar: [
       '/',
       {
         title: 'gdash',
         collapsable: false,
         sidebarDepth: 2,
-        path: '/gdash',
+        path: '/gdash/',
         children: [
           '/gdash/api.html',
         ],
@@ -20,7 +21,7 @@ module.exports = {
         title: 'Patchwire',
         collapsable: false,
         sidebarDepth: 2,
-        path: '/patchwire',
+        path: '/patchwire/',
         children: [
           '/patchwire/api.html',
         ],
@@ -29,9 +30,36 @@ module.exports = {
         title: 'Event Horizon',
         collapsable: false,
         sidebarDepth: 2,
-        path: '/event-horizon',
+        path: '/event-horizon/',
         children: [
           '/event-horizon/api.html',
+        ],
+      },
+      {
+        title: 'Delta',
+        collapsable: false,
+        sidebarDepth: 2,
+        path: '/delta/',
+        children: [
+          '/delta/',
+        ],
+      },
+      {
+        title: 'Particore',
+        collapsable: false,
+        sidebarDepth: 2,
+        path: '/particore/',
+        children: [
+          '/particore/api.html',
+        ],
+      },
+      {
+        title: 'Gamatas',
+        collapsable: false,
+        sidebarDepth: 2,
+        path: '/gamatas/',
+        children: [
+          '/gamatas/api.html',
         ],
       },
     ],
