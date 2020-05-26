@@ -1,15 +1,14 @@
-# GaMaTas - Testing automation for GameMaker: Studio
+# Gamatas
 
 Gamatas is a collection of GML scripts to add automated testing to GameMaker.
 
-## Installation
+## Download and Install
 
-Download the latest [gamatas.zip from releases](https://github.com/gm-core/gamatas/releases) and import the scripts
-into your project.
+Download the [latest release](https://github.com/gm-core/gamatas/releases/download/v4.1.0/gamatas-4-1-0.yymp) and import into GameMaker Studio.
 
-## GameMaker: Studio 2 Polyfills
+Browse older releases and source downloads on the [releases page](https://github.com/gm-core/gamatas/releases)
 
-If you are using GameMaker: Studio 2, you must have the `instance_create` script imported to your game as well from the `polyfills` folder of the [git repo](https://github.com/gm-core/gamatas). GameMaker: Studio 1.4 does not need this script, as it will cause an error. If you imported your project from GM:S 1.4, you may already have this script from the compatability scripts.
+For instructions on importing yymp files, see [Installing .yymp Packages](/installing.html)
 
 ## Usage
 
@@ -27,8 +26,8 @@ test_describe("Player takes damage");
 
 ### 2. Write some tests
 
-Gamatas will run through tests in order based on your User Defined events. On
-your test object, add a `User Defined 0` event. This is the first user defined
+Gamatas will run through tests in order based on your User Events. On
+your test object, add a `User Event 0` event. This is the first user defined
 event, and therefore will be the first test to run.
 
 Now, define a specific test with `test_it()`:
@@ -51,12 +50,12 @@ assert_equal(obj_player.hp, oldHP - damageAmount);
 test_end();
 ```
 
-`assert_equal(x, y)` ensures that `x` and `y` are equal. See the [API](#api) for all
+`assert_equal(x, y)` ensures that `x` and `y` are equal. See the [API](/gamatas/api.html) for all
 documentation on assertions.
 
-`test_end()` finishes the test and moves on to the next `User Defined` event.
+`test_end()` finishes the test and moves on to the next `User Event` event.
 
-When you have written the tests, your last User Defined event should contain:
+When you have written the tests, your last User Event should contain:
 
 ```GML
 test_describe_pass();

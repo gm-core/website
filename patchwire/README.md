@@ -1,6 +1,8 @@
 # Patchwire (for GameMaker)
 
-GameMaker client scripts for the Patchwire multiplayer server framework
+GameMaker client scripts for the Patchwire multiplayer server framework.
+
+This documentation is only for the GameMaker side of Patchwire. For the server docs (node.js), please see the [Patchwire Github Repository](https://github.com/twisterghost/patchwire).
 
 Version 1.1.0
 

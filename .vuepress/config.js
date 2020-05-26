@@ -14,6 +14,7 @@ module.exports = {
         path: '/',
         children: [
           '/browse.html',
+          '/installing.html',
           '/gamemaker-2.3-beta.html',
         ],
       },

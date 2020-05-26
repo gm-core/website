@@ -1,5 +1,7 @@
 # gdash API
 
+For gdash version 5.0.0
+
 ## `_and(valueA, valueB)`
 
 Returns the value of the provided arguments after a boolean and
