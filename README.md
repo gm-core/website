@@ -5,7 +5,7 @@ actionText: Get Started
 actionLink: /browse/
 features:
 - title: Lightweight
-  details: "GM Core utilities come packaged as simple scripts or GMS local packages and create no overhead on your project."
+  details: "GM Core utilities come packaged as simple importable yymp files or scripts and create no overhead on your project."
 - title: Documented
   details: "GM Core scripts all come with extenisve in-script documentation and auto-complete/code suggestion support."
 - title: "Free & Open Source"

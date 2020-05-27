@@ -2,9 +2,13 @@
 
 Simplified particle type generation for GameMaker: Studio and GameMaker: Studio 2
 
-## Installation
+## Download and Install
 
-To use Particore, download [the latest release](https://github.com/gm-core/particore/releases), and add the scripts to your project. The easiest way to do this is to drag the scripts into the editor.
+Download the [latest release](https://github.com/gm-core/particore/releases/download/v1.0.0/particore-1-0-0.yymp) and import into GameMaker Studio.
+
+Browse older releases and source downloads on the [releases page](https://github.com/gm-core/particore/releases)
+
+For instructions on importing yymp files, see [Installing .yymp Packages](/installing.html)
 
 ## What Particore Does
 

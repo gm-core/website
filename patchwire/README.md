@@ -8,9 +8,13 @@ Version 1.1.0
 
 Compatible with [Patchwire 0.2.*](https://github.com/twisterghost/patchwire).
 
-## Installation
+## Download and Install
 
-Download the latest .zip [release](https://github.com/twisterghost/patchwire/releases) of Patchwire's scripts and add them into your GameMaker project.
+Download the [latest release](https://github.com/gm-core/patchwire-gm/releases/download/v1.1.0/patchwire-gm-1-1-0.yymp) and import into GameMaker Studio.
+
+Browse older releases and source downloads on the [releases page](https://github.com/gm-core/patchwire-gm/releases)
+
+For instructions on importing yymp files, see [Installing .yymp Packages](/installing.html)
 
 ## Usage
 

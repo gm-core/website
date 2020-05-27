@@ -2,11 +2,13 @@
 
 Lightweight delta timing solution for GameMaker: Studio and GameMaker: Studio 2
 
-## Usage
+## Download and Install
 
-To use Delta, download [the latest release for your GameMaker version](https://github.com/gm-core/delta/releases), and add the scripts to your project. The easiest way to do this is to drag the scripts into the editor, or import them using the resource system.
+Download the [latest release](https://github.com/gm-core/delta/releases/download/v1.0.1/delta-1-0-1.yymp) and import into GameMaker Studio.
 
-If you would like to also use the `DeltaObject` object, right click on `Objects` in your resource tree, and select `Add Existing`, then import the `DeltaObject.yy` (GMS2) or `DeltaObject.object.gmx` (GMS1) file.
+Browse older releases and source downloads on the [releases page](https://github.com/gm-core/delta/releases)
+
+For instructions on importing yymp files, see [Installing .yymp Packages](/installing.html)
 
 ## Delta Timing
 
