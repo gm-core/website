@@ -1,6 +1,6 @@
 # gdash API
 
-For gdash version 5.0.0
+For gdash version 6.0.0
 
 ## `_and(valueA, valueB)`
 
@@ -271,34 +271,33 @@ _fill(arr, 0);
 // => [0, 0, 0, 0];
 ```
 
-## `_filter(collection, script)`
+## `_filter(collection, filterMethod)`
 
 Returns a collection where values of the input collection are truthy when run through the provided function.
 
 ```gml
 @param {Array|ds_list} collection The collection to filter
-@param {Script} filterScript The script to filter with
+@param {Method} filterMethod The method to filter with
 
 @returns {Array|ds_list} The filtered collection
 
 @example
 _filter([0, 1, 2, 3], lessThanTwo)
 // => [0, 1]
-
 ```
 
-## `_find(array, findScript)`
+## `_find(array, findMethod)`
 
 Iterates over an array, returning the first element that the given script returns true for.
 
 ```gml
 @param {Array} array The array to iterate over
-@param {Script} findScript The script to run on the given element
+@param {Method} findMethod The method to run on the given element
 
 @returns {*} The first element that returns truthy from the script
 
 @example
-_find([0, 1, 2, 3], __equalsThree);
+_find([0, 1, 2, 3], function(n) {return n == 3});
 // => 3
 ```
 
@@ -330,7 +329,7 @@ Gets a nested value following a dot notation
 @example
 // someMap looks like:
 // { nested: {three: {deep: 1}}}
-_get(someMap, 'nested.three.deep');
+_.get(someMap, 'nested.three.deep');
 // => 1
 
 ```
@@ -521,13 +520,13 @@ map[? "level"] // = 1
 
 ```
 
-## `_map(collection, script [, ds_type])`
+## `_map(collection, method [, ds_type])`
 
-Iterates over a given collection, running the provided function for each value in the collection. Returns an array of all function results at each index.
+Iterates over a given collection, running the provided method for each value in the collection. Returns an array of all method results at each index.
 
 ```gml
 @param {Array|DS_Map|DS_List} collection The collection to map
-@param {Script} script The script to map over the collection
+@param {Method} method The method to map over the collection
 @param {ds_type|String} optionalType ["array"] The type of collection. Only provide when using a DS
 
 @returns {Array} An array of all mapped results
@@ -578,21 +577,22 @@ _or(false, false);
 
 ```
 
-## `_partial(script, partialArgs...)`
+## `_partial(method, partialArgs...)`
 
 Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of `_run`.
 
 > *Note*: Partials are to be treated as a data structure, and must be cleaned up with _free() when they are no longer of use.
 
 ```gml
-@param {Script} script The script to create a partial of
+@param {Method} method The script to create a partial of
 @param {*} partialArguments... Arguments to bind to the partial
 
 @returns {Real} The partial ID (a ds_map, internally)
 
 @example
-// Script: lessThan
-return argument1 < argument0
+function lessThan(a, b) {
+return b < a
+}
 
 // Meanwhile...
 var lessThanTwo = _partial(lessThan, 2);
@@ -657,15 +657,15 @@ _reverse(arr);
 // => [2, 1, 0];
 ```
 
-## `_run(scriptOrPartial, arguments...)`
+## `_run(methodOrPartial, arguments...)`
 
-Executes a script or partial with the provided arguments
+Executes a method or partial with the provided arguments
 
 ```gml
-@param {Script|Real} scriptOrPartial The script to run or the ID of the partial to run
-@param {*} arguments... Arguments to pass the script
+@param {Method|Real} methodOrPartial The method to run or the ID of the partial to run
+@param {*} arguments... Arguments to pass the method or partial
 
-@returns {*} The return value of the script
+@returns {*} The return value of the execution
 
 @example
 _run(_add, 1, 2);
@@ -697,7 +697,7 @@ _set(someMap, 'nested.three.deep', 2);
 // { someKey: "someValue" }
 _set(someMap, "newKey", ds_list_create(), ds_type_list);
 // => someMap now looks like:
-// => { someKey: "someValue", newKey: [] }
+// => { someKey: "someValue"], newKey: [] }
 
 ```
 
@@ -737,28 +737,28 @@ _split('Dogs and cats and mice', ' and ');
 // => ['Dogs', 'cats', 'mice']
 ```
 
-## `_spread(script, argsArray)`
+## `_spread(method, argsArray)`
 
-Runs a script with the provided array as arguments
+Runs a method with the provided array as arguments
 
 ```gml
-@param {Script} script The script to run
+@param {Method} method The method to run
 @param {Array} arrayOfArguments An array to provide as individual arguments
 
-@return {*} The return value of the script
+@return {*} The return value of the method
 
 @example
 _spread(add_to_list, [listId, 1, 2, 3, 4]);
 // => List now contains 1, 2, 3, 4
 ```
 
-## `_times(executeCount, script)`
+## `_times(executeCount, method)`
 
 Returns an array of the result of a function run the given number of times
 
 ```gml
 @param {Real} executeCount The number of times to execute the function
-@param {Script} script The script to execute
+@param {Method} method The method to execute
 
 @returns {Array} An array of the script results
 
