@@ -92,21 +92,16 @@ pt_orientation(PT.Relative);
 pt_life(60, 120);
 ```
 
-## Test Your Code with Gamatas
+## Test Your Code with GMTest
 
-Use [Gamatas](/gamatas/) to write tests for your code...
+Use [GMTest](/gmtest/) to write tests for your code...
 
 ```gml
-test_describe("Player takes damage");
-
-test_it("causes the health variable to be lower");
-
-instance_create_depth(100, 100, 0, obj_player);
-var oldHP = obj_player.hp;
-var damageAmount = 10;
-hurt_player(damageAmount); // A script to cause damage to the player.
-
-assert_equal(obj_player.hp, oldHP - damageAmount);
-
-test_end();
+test_describe("hurt_player", function() {
+  test_it("subtracts from the health of the player", function() {
+    health = 100;
+    hurt_player(10);
+    assert_equal(health, 90);
+  });
+});
 ```

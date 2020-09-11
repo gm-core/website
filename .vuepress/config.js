@@ -15,7 +15,7 @@ module.exports = {
         children: [
           '/browse.html',
           '/installing.html',
-          '/gamemaker-2.3-beta.html',
+          '/gamemaker-2.3.html',
         ],
       },
       {
@@ -59,11 +59,12 @@ module.exports = {
         ],
       },
       {
-        title: 'Gamatas',
+        title: 'GMTest',
         collapsable: false,
-        path: '/gamatas/',
+        path: '/gmtest/',
         children: [
-          '/gamatas/api.html',
+          '/gmtest/api.html',
+          '/gmtest/examples.html',
         ],
       },
     ],

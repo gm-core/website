@@ -1,10 +1,10 @@
 # Installing `.yymp` Packages
 
-GM Core packages are distributed primarily as `.yymp` files. These files are GameMaker packages which can be easily imported into an existing GameMaker: Studio 2 project.
+GM Core packages are distributed primarily as `.yymp` (or `.yymps` for GMS 2.3, but its the same process) files. These files are GameMaker packages which can be easily imported into an existing GameMaker: Studio 2 project.
 
 ## Guide
 
-First, download the `.yymp` file. This guide will assume you downloaded `gdash.yymp` to your `~/Downloads` folder.
+First, download the `.yymp(s)` file. This guide will assume you downloaded `gdash.yymp` to your `~/Downloads` folder.
 
 1. In your GameMaker project, click "Tools" on the top menu
 2. Select "Import Local Package"
@@ -14,5 +14,3 @@ First, download the `.yymp` file. This guide will assume you downloaded `gdash.y
 6. Click "Import" (leave the checkbox unchecked)
 
 You should now see the resources in your resource tree.
-
-
