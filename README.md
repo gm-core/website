@@ -37,6 +37,19 @@ var playerData = _map_of(
 _free(playerData);
 ```
 
+## Custom Global Events with Event Horizon
+
+Use [Event Horizon](/event-horizon/) to add an event pub/sub setup to your project...
+
+```gml
+event_fire("gunshot");
+
+// Elsewhere...
+event_add_listener("gunshot", function() {
+  guard.alert();
+});
+```
+
 ## Simple Online Networking with Patchwire
 
 Use [Patchwire](/patchwire/) to make a simple online game...
@@ -54,17 +67,6 @@ show_debug_message("Connected to server");
 var payload = argument0;
 var name  = payload[? "name"];
 show_debug_message(name + " has joined!");
-```
-
-## Custom Global Events with Event Horizon
-
-Use [Event Horizon](/event-horizon/) to add an event pub/sub setup to your project...
-
-```gml
-event_fire("gunshot");
-
-// Elsewhere...
-event_add_listener("gunshot", 0);
 ```
 
 ## Easy Timing with Delta
