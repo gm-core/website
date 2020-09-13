@@ -7,7 +7,7 @@ Compatible with [Patchwire 0.5.*](https://github.com/twisterghost/patchwire).
 
 ## Installation
 
-Download the latest .yymps [release](https://github.com/twisterghost/patchwire/releases) of Patchwire and import the local package. For detailed instructions, see [this guide](https://gmcore.io/installing.html)
+Download the latest .yymps [release](https://github.com/gm-core/patchwire-gm/releases) of Patchwire and import the local package. For detailed instructions, see [this guide](https://gmcore.io/installing.html)
 
 ## Usage
 
