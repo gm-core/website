@@ -14,6 +14,10 @@ A successful connection fires a `"connected"` event. A failed connection fires a
 
 Connects to the given server/port. Upon a successful connection, a `"connected"` command is received.
 
+### `net_disconnect()`
+
+Begins a graceful disconnection from the server. Upon success, a `disconnected` evnet will fire.
+
 ### `net_resolve()`
 
 Run this function in your networking controller's `Async - Networking` event to enable networking.
