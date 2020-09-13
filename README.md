@@ -56,17 +56,16 @@ Use [Patchwire](/patchwire/) to make a simple online game...
 
 ```gml
 net_init();
-net_connect("10.0.0.1", 3000);
-net_cmd_add_handler("connected", handle_connected);
-net_cmd_add_handler("newPlayer", handle_new_player);
 
-// handle_connected
-show_debug_message("Connected to server");
+net_cmd_add_handler("connected", function() {
+  show_debug_message("Connected to server");
+});
 
-// handle_new_player
-var payload = argument0;
-var name  = payload[? "name"];
-show_debug_message(name + " has joined!");
+net_cmd_add_handler("newPlayer", function(data) {
+  show_debug_message(data[? "name"] + " has joined!");
+});
+
+net_connect("127.0.0.1", 3000);
 ```
 
 ## Easy Timing with Delta
