@@ -4,7 +4,7 @@
 
 ## Download and Install
 
-Download the [latest release](https://github.com/gm-core/gdash/releases/download/5.0.0/gdash-5-0-0.yymp) and import into GameMaker Studio.
+Download the [latest release](https://github.com/gm-core/gdash/releases/) and import into GameMaker Studio.
 
 Browse older releases and source downloads on the [releases page](https://github.com/gm-core/gdash/releases)
 
