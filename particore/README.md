@@ -4,7 +4,7 @@ Simplified particle type generation for GameMaker: Studio and GameMaker: Studio 
 
 ## Download and Install
 
-Download the [latest release](https://github.com/gm-core/particore/releases/download/v1.0.0/particore-1-0-0.yymp) and import into GameMaker Studio.
+Download the [latest release](https://github.com/gm-core/particore/releases/) and import into GameMaker Studio.
 
 Browse older releases and source downloads on the [releases page](https://github.com/gm-core/particore/releases)
 
