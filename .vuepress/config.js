@@ -15,6 +15,7 @@ module.exports = {
         children: [
           '/browse.html',
           '/installing.html',
+          '/foundation.html',
           '/gamemaker-2.3.html',
         ],
       },
