@@ -1,14 +1,10 @@
 # Delta
 
-Lightweight delta timing solution for GameMaker: Studio and GameMaker: Studio 2
+Lightweight delta timing solution for GameMaker: Studio 2
 
-## Download and Install
+## Usage
 
-Download the [latest release](https://github.com/gm-core/delta/releases/download/v1.0.1/delta-1-0-1.yymp) and import into GameMaker Studio.
-
-Browse older releases and source downloads on the [releases page](https://github.com/gm-core/delta/releases)
-
-For instructions on importing yymp files, see [Installing .yymp Packages](/installing.html)
+To use Delta, download [the latest .yymps release](https://github.com/gm-core/delta/releases), and import the local package to your project. For detailed instructions, see [this guide](https://gmcore.io/installing.html#guide).
 
 ## Delta Timing
 
@@ -52,6 +48,10 @@ someTimer -= d(1);
 
 A utility function to return the given number in frames that would constitute that many seconds. Useful for setting timers in real seconds. This function uses your current game speed to determine the result.
 
+### `delta_set_max_lag_compensation(maxLagMultiplier)`
+
+Sets the maximum multiplier for Delta to compensate for lag with. Default is 3. Setting this to a higher number will handle larger lag spikes, but may cause erratic behavior.
+
 ## DeltaObject
 
 Delta exposes an object parent which automates delta timing for most usages: movement, gravity, friction and alarms, even integrating natively with alarm events!
@@ -73,6 +73,4 @@ Once you have set your object to inherit from `DeltaObject`, you can use the fol
 * `d_gravity` instead of `gravity` (still uses `gravity_direction`)
 
 These values will be converted into the correct values for delta timing, and managed internally to the object, then set as their GameMaker equivalents. When using these variables, *do not* use the GameMaker equivalents as well.
-
-> **Note**: DeltaObject is considered beta. While it closely approximates the math that GameMaker uses, it is not an exact 1:1 when slowdowns/speedups occur.
 
