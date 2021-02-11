@@ -2,7 +2,7 @@
 home: true
 tagline: "Foundational utilities for GameMaker: Studio"
 actionText: Get Started
-actionLink: /browse/
+actionLink: /browse.html
 features:
 - title: Lightweight
   details: "GM Core utilities come packaged as simple importable yymp files or scripts and create no overhead on your project."
